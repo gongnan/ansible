@@ -946,6 +946,12 @@ class RedosHostname(Hostname):
     strategy_class = SystemdStrategy
 
 
+class OpenEulerHostname(Hostname):
+    platform = 'Linux'
+    distribution = 'Openeuler'
+    strategy_class = SystemdStrategy
+
+
 def main():
     module = AnsibleModule(
         argument_spec=dict(
